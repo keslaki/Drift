@@ -1,6 +1,6 @@
-# Image Classification with Feature Extraction Techniques
+# Classification with Feature Extraction Techniques
 
-This repository contains Python code for training neural networks on the MNIST and CIFAR-100 datasets, comparing different feature extraction methods: Discrete Cosine Transform (DCT), Principal Component Analysis (PCA), Dynamic Response-Informed Feature Transform (DRIFT), and raw pixel inputs. The implementation uses PyTorch for neural network training and includes utilities for data preprocessing, feature extraction, and performance evaluation.
+This repository contains Python code for training neural networks on the MNIST and CIFAR-100 datasets, comparing different feature extraction methods: Discrete Cosine Transform (DCT), Principal Component Analysis (PCA), proposed (DRIFT), and raw pixel inputs. The implementation uses PyTorch for neural network training and includes utilities for data preprocessing, feature extraction, and performance evaluation.
 
 ## Project Overview
 
@@ -18,8 +18,8 @@ The code measures preparation and training times, as well as training and valida
 
 ## Repository Structure
 
-- `mnist_classification.py`: Script for training and evaluating models on the MNIST dataset.
-- `cifar100_classification.py`: Script for training and evaluating models on the CIFAR-100 dataset.
+- `mnist.py`: Script for training and evaluating models on the MNIST dataset.
+- `cifar100.py`: Script for training and evaluating models on the CIFAR-100 dataset.
 - `README.md`: This file, providing an overview and instructions.
 
 ## Requirements
@@ -36,18 +36,18 @@ The code is compatible with Python 3.6+ and requires a machine with or without a
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/your-username/Drift_.git
+   cd drift_
    ```
 
 2. **Run the Scripts**:
    - For MNIST:
      ```bash
-     python mnist_classification.py
+     python mnist.py
      ```
    - For CIFAR-100:
      ```bash
-     python cifar100_classification.py
+     python cifar100.py
      ```
 
 3. **Output**:
@@ -81,7 +81,7 @@ The code is compatible with Python 3.6+ and requires a machine with or without a
 
 ## Results
 
-The scripts output preparation and training times, as well as accuracy and loss metrics. To visualize results, you can extend the code to plot the `histories` data using `matplotlib`. Example metrics include:
+The scripts output preparation and training times, as well as accuracy and loss metrics. To visualize results (run plot.py), you can extend the code to plot the `histories` data using `matplotlib`. Example metrics include:
 - Training and validation accuracy/loss per epoch.
 - Total time for data loading, feature extraction, and model training.
 
@@ -91,4 +91,4 @@ Contributions are welcome! Please submit a pull request or open an issue for bug
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. 
