@@ -16,14 +16,14 @@ import torch.optim as optim
 # Configuration for CIFAR-100
 CONFIG = {
     'grid_size': 32,  # CIFAR images are 32x32
-    'num_modes': 49,
+    'num_modes': 100,
     'num_classes': 100,
     'valida_split': 0.2,
     'epochs': 200,
     'batch_size': 512,
     'activation_functions': ['relu'],
-    'hidden_layers': [8, 16, 8],
-    'dct_final_side_length': 7,
+    'hidden_layers': [64, 128, 64],
+    'dct_final_side_length': 10,
     'POR': 1
 }
 
@@ -370,7 +370,7 @@ def main():
     for res in final_results:
         print(f"{res['name']} ({res['activation']}) - Test accuracy: {res['accuracy']:.4f}, Top-1: {res['top1']:.4f}", flush=True)
 
-    with open('cifar100.pkl', 'wb') as f:
+    with open('cifar100_10_100.pkl', 'wb') as f:
         pickle.dump({'histories': all_methods_epoch_histories, 'CONFIG': CONFIG}, f)
 
     return all_methods_epoch_histories
