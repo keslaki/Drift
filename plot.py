@@ -1,5 +1,3 @@
-# this is the same plot code for both MNIST and CIFAR100. Change the saved name at the end
-
 import pickle
 
 import matplotlib.pyplot as plt
@@ -20,7 +18,7 @@ INSET_TITLE_FONTSIZE = 10
 INSET_LABEL_FONTSIZE = 9
 
 # ======= Load Data =======
-with open('training_histories.pkl', 'rb') as f:
+with open(file_M, 'rb') as f:
     data = pickle.load(f)
     all_methods_epoch_histories = data['histories']
     CONFIG = data['CONFIG']
