@@ -12,6 +12,9 @@ from scipy.fftpack import dct, idct
 import collections
 import pickle
 
+#LEARNING_RATE = 0.2 
+#(in case you want to change the learning rate, add it in: optimizer = optim.Adam(model.parameters()))
+
 # Configuration
 CONFIG = {
     'grid_size': 28,
