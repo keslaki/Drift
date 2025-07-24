@@ -11,7 +11,7 @@ The code evaluates the performance of a fully connected neural network on two st
 Four feature extraction methods are compared:
 1. **DCT**: Extracts frequency components using the Discrete Cosine Transform.
 2. **PCA**: Reduces dimensionality by projecting data onto principal components.
-3. **DRIFT**: Uses sinusoidal mode shapes to capture spatial patterns, with padding applied for CIFAR-100.
+3. **DRIFT**: Uses sinusoidal mode shapes to capture spatial patterns.
 4. **Raw**: Uses flattened pixel values without feature extraction.
 
 The code measures preparation and training times, as well as training and validation accuracy/loss over epochs, to assess the efficiency and effectiveness of each method.
@@ -61,11 +61,11 @@ The code is compatible with Python 3.6+ and requires a machine with or without a
 
 - **Hyperparameters**:
   - MNIST: Batch size = 512, Learning rate = 0.001, Epochs = 50, Hidden layers = [128, 256, 128], Number of modes = 49, Grid size = 28.
-  - CIFAR-100: Batch size = 512, Learning rate = 0.001, Epochs = 400, Hidden layers = [64, 128, 64], Number of modes = 25, Grid size = 32, Padding for DRIFT = 5.
+  - CIFAR-100: Batch size = 512, Learning rate = 0.001, Epochs = 400, Hidden layers = [64, 128, 64], Number of modes = 25, Grid size = 32.
 - **Feature Extraction**:
-  - DCT: Extracts a fixed-size frequency component grid (7x7 for MNIST, 5x5 for CIFAR-100 per channel).
-  - PCA: Computes principal components for dimensionality reduction (49 for MNIST, 25 per channel for CIFAR-100).
-  - DRIFT: Applies sinusoidal mode shapes, with padding for CIFAR-100 to handle RGB channels.
+  - DCT: Extracts a fixed-size frequency component grid (7x7 for MNIST, 5x5 for CIFAR-100 per channel - you can change the dimensions).
+  - PCA: Computes principal components for dimensionality reduction (49 for MNIST, 25 per channel for CIFAR-100 - you can change the dimensions).
+  - DRIFT: Applies sinusoidal mode shapes (cosine Similarity).
   - Raw: Uses flattened pixel values (784 for MNIST, 3072 for CIFAR-100).
 - **Neural Network**:
   - Fully connected network with ReLU activations and Adam optimizer.
