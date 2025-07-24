@@ -1,3 +1,5 @@
+file_M = 'training_histories10_100_100.pkl'
+
 import pickle
 
 import matplotlib.pyplot as plt
