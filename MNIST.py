@@ -15,14 +15,14 @@ import pickle
 # Configuration
 CONFIG = {
     'grid_size': 28,
-    'num_modes': 16,
+    'num_modes': 100,
     'num_classes': 10,
     'valida_split': 0.2,
-    'epochs': 200,
+    'epochs': 100,
     'batch_size': 512,
     'activation_functions': ['relu'],
-    'hidden_layers': [8, 16, 8],
-    'dct_final_side_length': 4,
+    'hidden_layers': [2, 2, 2],
+    'dct_final_side_length': 10,
     'POR': 1  # Portion of total data to use (e.g., 0.1 for 10%)
 }
 
@@ -319,7 +319,7 @@ def main():
         print(f"{res['name']} ({res['activation']}) - Test accuracy: {res['accuracy']:.4f}, Top-1: {res['top1']:.4f}", flush=True)
 
     # Save histories and CONFIG for plotting
-    with open('training_histories.pkl', 'wb') as f:
+    with open('training_histories10_100_100.pkl', 'wb') as f:
         pickle.dump({'histories': all_methods_epoch_histories, 'CONFIG': CONFIG}, f)
 
     return all_methods_epoch_histories
